@@ -105,7 +105,7 @@ function App() {
               Download or view my resume for a detailed overview of my experience:
             </p>
             <a
-              href="https://drive.google.com/file/d/1I9k9O0pgC0ciR0_qV8i298RN2uWHClef/view?usp=sharing"
+              href="https://drive.google.com/file/d/1muhWmKqE9845L-71HAFM5Bt9RRRtpZqh/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-left mt-3 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 transition-colors font-medium rounded-md"
@@ -119,7 +119,7 @@ function App() {
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-800">Projects</h2>
             <p className="text-gray-700 mt-1 text-base leading-relaxed">
-              Explore a few of my recent development projects:
+              Recent development projects:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
               {projects.map((project, index) => (
@@ -132,7 +132,7 @@ function App() {
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-800">Colab Notebooks</h2>
             <p className="text-gray-700 mt-1 text-base leading-relaxed">
-              A selection of my data analysis and ML notebooks:
+              Data analysis and ML notebooks:
             </p>
             <ul className="mt-6">
               {colabLinks.map((colab, index) => (
