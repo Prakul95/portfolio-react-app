@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import { FaGithub, FaGoogle, FaYoutube } from "react-icons/fa";
 import "../assets/styles/Project.scss";
 
 const projects = [
@@ -38,6 +38,27 @@ const colabLinks = [
   },
 ];
 
+const filmmakingProjects = [
+  {
+    name: "Pan Kombadi",
+    description:
+      "An experimental film where soundscapes drive the narrative, replacing music with raw, atmospheric effects. The film visually juxtaposes the interview’s message with a secondary, symbolic storyline, drawing subtle parallels to honor crimes around the world.",
+    videoId: "JiYt63VM8X0",
+  },
+  {
+    name: "Furor",
+    description:
+      "A filmmaker's worst nightmare—her crew bails on the shoot day. Frustrated and alone, she writes a parallel heist story where a group of criminals gives absurd excuses for skipping a robbery. A humorous take on artistic struggles, filmed in 48 hours.",
+    videoId: "RBAztqZhfpk",
+  },
+  {
+    name: "Driven",
+    description:
+      "A man spirals into paranoia as his dark past resurfaces, warping his perception of reality. As his grip on sanity weakens, eerie visions and unsettling truths blur the lines between memory and nightmare. Created for a 48-hour horror film festival.",
+    videoId: "mgWGpBiVKbU",
+  },
+];
+
 const ProjectCard = ({ name, description, link }) => (
   <div className="project-card">
     <h3>{name}</h3>
@@ -57,6 +78,24 @@ const ColabCard = ({ name, description, link }) => (
   </li>
 );
 
+const YouTubeCard = ({ name, description, videoId }) => (
+  <div className="youtube-card">
+    <h3>{name}</h3>
+    <p>{description}</p>
+    <div className="youtube-embed">
+      <iframe
+        width="100%"
+        height="250"
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=0&modestbranding=1&rel=0&showinfo=0`}
+        title={name}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </div>
+);
+
 function Project() {
   return (
     <div className="projects-container" id="projects">
@@ -73,6 +112,13 @@ function Project() {
           <ColabCard key={index} {...colab} />
         ))}
       </ul>
+
+      <h1>Filmmaking Projects</h1>
+      <div className="youtube-grid">
+        {filmmakingProjects.map((project, index) => (
+          <YouTubeCard key={index} {...project} />
+        ))}
+      </div>
     </div>
   );
 }
