@@ -1,5 +1,18 @@
 import { FaGithub, FaExternalLinkAlt, FaGoogle, FaLinkedin } from "react-icons/fa";
-import "./App.css";
+// import "./App.css";
+import React, {useState, useEffect} from "react";
+import {
+  Main,
+  Timeline,
+  Expertise,
+  Project,
+  Navigation,
+  Footer,
+  Contact,
+
+} from "./components";
+import FadeIn from './components/FadeIn';
+import './index.scss';
 
 // Sample Projects
 const projects = [
@@ -71,6 +84,19 @@ const ColabCard = ({ name, description, link }) => (
 );
 
 function App() {
+  // const [mode, setMode] = useState<string>('dark');
+  const [mode, setMode] = useState('dark');
+
+    const handleModeChange = () => {
+        if (mode === 'dark') {
+            setMode('light');
+        } else {
+            setMode('dark');
+        }
+    }
+    useEffect(() => {
+      window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    }, []);
   return (
     <>
       {/*
@@ -86,93 +112,17 @@ function App() {
         `}
       </style>
 
-      <div className="font-futura bg-gray-50 min-h-screen">
-        <div className="max-w-6xl mx-auto px-6 py-10 text-left">
-          {/* Header Section */}
-          <header className="mb-12">
-            <h1 className="text-4xl font-extrabold text-gray-800">
-              Prakul's Portfolio
-            </h1>
-            <p className="text-lg text-gray-600 mt-2">
-              Full Stack Infrastructure Developer
-            </p>
-          </header>
-
-          {/* Resume Section */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-800">Resume</h2>
-            <p className="text-gray-700 mt-1 text-base leading-relaxed">
-              Download or view my resume for a detailed overview of my experience:
-            </p>
-            <a
-              href="https://drive.google.com/file/d/1muhWmKqE9845L-71HAFM5Bt9RRRtpZqh/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-left mt-3 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 transition-colors font-medium rounded-md"
-            >
-              View Resume
-              <FaExternalLinkAlt className="ml-2" />
-            </a>
-          </section>
-
-          {/* Projects Section */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-800">Projects</h2>
-            <p className="text-gray-700 mt-1 text-base leading-relaxed">
-              Recent development projects:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-              {projects.map((project, index) => (
-                <ProjectCard key={index} {...project} />
-              ))}
-            </div>
-          </section>
-
-          {/* Colab Notebooks Section */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-800">Colab Notebooks</h2>
-            <p className="text-gray-700 mt-1 text-base leading-relaxed">
-              Data analysis and ML notebooks:
-            </p>
-            <ul className="mt-6">
-              {colabLinks.map((colab, index) => (
-                <ColabCard key={index} {...colab} />
-              ))}
-            </ul>
-          </section>
-
-          {/* More (About Me & LinkedIn) Section */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-800">More</h2>
-            <p className="text-gray-700 mt-1 text-base leading-relaxed">
-              I'm passionate about creating efficient, scalable software solutions 
-              and exploring cutting-edge technologies in the DevOps and 
-              full-stack ecosystem. I love learning new languages, frameworks, and 
-              tools that can make development faster, more enjoyable, and more robust.
-            </p>
-            <p className="text-gray-700 mt-4 text-base leading-relaxed">
-              Connect with me on LinkedIn to stay updated on my latest projects
-              and career milestones:
-            </p>
-            <a
-              href="https://www.linkedin.com/in/prakul-95/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center mt-3 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 transition-colors font-medium rounded-md"
-            >
-              LinkedIn Profile
-              <FaLinkedin className="ml-2" />
-            </a>
-          </section>
-
-          {/* Footer (Optional) */}
-          <footer className="border-t pt-6 mt-8">
-            <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} Prakul. All rights reserved.
-            </p>
-          </footer>
-        </div>
-      </div>
+      <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
+        <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
+        <FadeIn transitionDuration={700}>
+            <Main/>
+            <Expertise/>
+            <Timeline/>
+            <Project/>
+            <Contact/>
+        </FadeIn>
+        <Footer />
+    </div>
     </>
   );
 }
