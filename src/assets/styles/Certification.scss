@@ -1,0 +1,84 @@
+.certificate-card {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 300px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .certificate-preview {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .certificate-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .certificate-icon {
+    color: #ff9800;
+  }
+  
+  .certificates-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10%;
+    text-align: left;
+}
+  
+.certificates-container .certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+  
+.certificates-container .certificates-grid .certificate {
+    text-align: left;
+}
+  
+.certificate h2:hover {
+    text-decoration: underline;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+  
+.zoom {
+    border-radius: 5px;
+    transition: transform .2s;
+    margin: 0 auto;
+}
+  
+.zoom:hover {
+    transform: scale(1.05);
+}
+
+.certificate-card {
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 15px;
+}
+
+@media screen {
+    @media (max-width: 700px) {
+        .certificates-container {
+            display: block;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+  
+        .certificates-container .certificates-grid {
+            display: block;
+        }
+      
+        .certificates-container .certificates-grid .certificate {
+            padding-bottom: 5%;
+        }
+    }
+}
