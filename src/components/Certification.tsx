@@ -6,7 +6,17 @@ const certificates = [
   {
     name: "Foundations of Project Management",
     link: "https://coursera.org/verify/1WOUQIVI25WQ",
-    pdfPath: "/assets/certificates/foundations_project_management.pdf", // Make sure this path is correct in the public folder
+    pdfPath: "/assets/certificates/foundations_project_management.pdf",
+  },
+  {
+    name: "Project Initiation: Starting a Successful Project",
+    link: "https://coursera.org/verify/0EPJGOIPT5OH",
+    pdfPath: "/assets/certificates/ProjectInitiationStartingaSuccessfulProject.pdf", 
+  },
+  {
+    name: "Object Oriented Programming in Java",
+    link: "https://coursera.org/verify/TLKJR4WVIEK8",
+    pdfPath: "/assets/certificates/ObjectOrientedProgramminginJava.pdf",
   },
 ];
 
