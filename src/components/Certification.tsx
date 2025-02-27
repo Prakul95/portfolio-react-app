@@ -4,12 +4,17 @@ import "../assets/styles/Certification.scss";
 
 const certificates = [
   {
-    name: "Foundations of Project Management",
+    name: "Application Development using Microservices and Serverless by IBM",
+    link: "https://coursera.org/verify/C43V6CB8BELH",
+    pdfPath: "/assets/certificates/ApplicationDevelopmentUsingMicroservicesandServerless.pdf",
+  },
+  {
+    name: "Foundations of Project Management by Google",
     link: "https://coursera.org/verify/1WOUQIVI25WQ",
     pdfPath: "/assets/certificates/foundations_project_management.pdf",
   },
   {
-    name: "Project Initiation: Starting a Successful Project",
+    name: "Project Initiation: Starting a Successful Project by Google",
     link: "https://coursera.org/verify/0EPJGOIPT5OH",
     pdfPath: "/assets/certificates/ProjectInitiationStartingaSuccessfulProject.pdf", 
   },
