@@ -7,6 +7,8 @@ import '../assets/styles/Main.scss';
 import DSC04669 from '../assets/images/DSC04669.png';
 
 function Main() {
+  const fileUrl = "https://drive.google.com/file/d/1u5OQnoet7ohOfO9OK0i5blJvNk3G91cc/";
+
   return (
     <div className="container">
       <div className="about-section">
@@ -30,7 +32,7 @@ function Main() {
           {/* View & Download Resume Buttons */}
           <div className="resume-buttons">
             <a 
-              href="/assets/Prakul_Resume.pdf" 
+              href={fileUrl + "preview"} 
               target="_blank" 
               rel="noopener noreferrer"
               className="resume-button view"
@@ -39,7 +41,7 @@ function Main() {
             </a>
 
             <a 
-              href="/assets/Prakul_Resume.pdf" 
+              href={fileUrl + "view"}
               download="Prakul_Resume.pdf"
               className="resume-button download"
             >
