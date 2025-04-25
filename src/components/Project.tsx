@@ -15,6 +15,13 @@ const projects = [
       "Developed a PostgreSQL-backed authentication system in Go, implementing secure user authentication with JWT tokens. Integrated caching for efficient session management, storing JWT tokens in cache upon login and invalidating them upon logout to enhance security and performance.",
     link: "https://github.com/Prakul95/JwtLoginDemo",
   },
+  {
+    name: "Create subtitles from audio and video files using the Faster-Whisper model",
+    description:
+      "Built a Python tool that extracts audio from media files, transcribes speech using the Faster-Whisper model, and generates .srt subtitle files. Enabled configurable options like language selection, beam size tuning, and optional timing delays for flexible subtitle creation.",
+    link: "https://github.com/Prakul95/createSubtitles",
+  }
+  
 ];
 
 const colabLinks = [
