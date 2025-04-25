@@ -16,7 +16,7 @@ const projects = [
     link: "https://github.com/Prakul95/JwtLoginDemo",
   },
   {
-    name: "Create subtitles from audio and video files using the Faster-Whisper model",
+    name: "Create subtitles from audio and video using the open AI's whisper or Faster-Whisper model",
     description:
       "Built a Python tool that extracts audio from media files, transcribes speech using the Faster-Whisper model, and generates .srt subtitle files. Enabled configurable options like language selection, beam size tuning, and optional timing delays for flexible subtitle creation.",
     link: "https://github.com/Prakul95/createSubtitles",
