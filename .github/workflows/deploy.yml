@@ -24,8 +24,13 @@ jobs:
     - name: Build the Vite app
       run: npm run build
 
+    - name: Configure Git identity for gh-pages
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
     - name: Deploy to GitHub Pages
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         CI: false
       run: npm run deploy
