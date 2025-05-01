@@ -44,7 +44,7 @@ const education = [
     date: "2025 - present",
     title: "Master of Business Administration, Information Technology",
     subtitle: "Humphreys University",
-    details: ["pursuing currently"]
+    details: ["On-going"]
   },
   {
     date: "2020 - 2022",
