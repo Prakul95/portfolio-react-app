@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaGoogle, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaGoogle, FaYoutube, FaRegFilePdf } from "react-icons/fa";
 import "../assets/styles/Project.scss";
 
 const projects = [
@@ -21,7 +21,6 @@ const projects = [
       "Built a Python tool that extracts audio from media files, transcribes speech using the Faster-Whisper model, and generates .srt subtitle files. Enabled configurable options like language selection, beam size tuning, and optional timing delays for flexible subtitle creation.",
     link: "https://github.com/Prakul95/createSubtitles",
   }
-  
 ];
 
 const colabLinks = [
@@ -42,6 +41,15 @@ const colabLinks = [
     link: "https://colab.research.google.com/drive/1Nzd_RX76qawJ0uQS9XzrIYrTxuxPUQu2?authuser=1#scrollTo=f3ms_eG0pk5n",
     description:
       "Comprehensive Exploratory Data Analysis (EDA) on the Tree dataset, uncovering patterns, relationships, and insights through statistical summaries, visualizations, and correlation analysis.",
+  },
+];
+
+const reports = [
+  {
+    name: "Designing a Fair Machine Learning Model for Recidivism Prediction in U.S. Court Systems",
+    link: "https://drive.google.com/file/d/1jyRCF7RE4Eox047W4DDvAnvywTW9CA9x/view?usp=sharing",
+    description:
+      "In this project for CSE 574: Introduction to Machine Learning, we acted as machine learning engineers tasked with building a fair and cost-effective replacement for the controversial COMPAS recidivism prediction algorithm used in U.S. courts. Using real-world data from Broward County, Florida, we evaluated three machine learning models (SVM, Neural Network, and Naive Bayes) and implemented five fairness-aware postprocessing techniques. Our selected solution—a Support Vector Machine (SVM) combined with the Demographic Parity fairness constraint and cost-based secondary optimization—achieved an overall accuracy of 62.79% and reduced societal cost to $-757 million. The model minimized racial disparities in predictive outcomes across African-American, Caucasian, Hispanic, and Other demographic groups. We justified our choice through comparative analysis of fairness metrics such as TPR, FPR, and FNR, ensuring our final model upheld ethical and financial responsibilities for all stakeholders including the public, government, and investors.",
   },
 ];
 
@@ -85,6 +93,15 @@ const ColabCard = ({ name, description, link }) => (
   </li>
 );
 
+const ReportsCard = ({ name, description, link }) => (
+  <li className="report-card">
+    <a href={link} target="_blank" rel="noopener noreferrer" className="report-link">
+      {name} <FaRegFilePdf className="icon" />
+    </a>
+    <p>{description}</p>
+  </li>
+);
+
 const YouTubeCard = ({ name, description, videoId }) => (
   <div className="youtube-card">
     <h3>{name}</h3>
@@ -117,6 +134,13 @@ function Project() {
       <ul className="colab-list">
         {colabLinks.map((colab, index) => (
           <ColabCard key={index} {...colab} />
+        ))}
+      </ul>
+
+      <h1>Reports</h1>
+      <ul className="reports">
+        {reports.map((report, index) => (
+          <ReportsCard key={index} {...report} />
         ))}
       </ul>
 
