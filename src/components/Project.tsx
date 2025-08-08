@@ -3,11 +3,17 @@ import { FaGithub, FaGoogle, FaYoutube, FaRegFilePdf } from "react-icons/fa";
 import "../assets/styles/Project.scss";
 
 const projects = [
-  {
-    name: "Java TicTacToe app",
+    {
+    name: "Create subtitles from audio and video using the open AI's whisper or Faster-Whisper model",
     description:
-      "Developed a real-time multiplayer Tic-Tac-Toe application in Java, enabling seamless gameplay with an in-game reset feature for users to restart matches dynamically.",
-    link: "https://github.com/Prakul95/tictactoe",
+      "Built a Python tool that extracts audio from media files, transcribes speech using the Faster-Whisper model, and generates .srt subtitle files. Enabled configurable options like language selection, beam size tuning, and optional timing delays for flexible subtitle creation.",
+    link: "https://github.com/Prakul95/createSubtitles",
+  },
+  {
+    name: "MCP server for star-gazing",
+    description: "Built a Python-based MCP server using Skyfield to detect eclipses and lunar phases. Integrated with OpenWeather API for real-time forecasts and connected to Google Calendar and Sheets MCPs for automated scheduling and event logging. Demo video link: https://www.youtube.com/watch?v=rrs_6oz-khE",
+    link: "https://github.com/Prakul95/mcp-python-star-gazing"
+
   },
   {
     name: "Login Demo using JWT tokens",
@@ -16,11 +22,12 @@ const projects = [
     link: "https://github.com/Prakul95/JwtLoginDemo",
   },
   {
-    name: "Create subtitles from audio and video using the open AI's whisper or Faster-Whisper model",
+    name: "Java TicTacToe app",
     description:
-      "Built a Python tool that extracts audio from media files, transcribes speech using the Faster-Whisper model, and generates .srt subtitle files. Enabled configurable options like language selection, beam size tuning, and optional timing delays for flexible subtitle creation.",
-    link: "https://github.com/Prakul95/createSubtitles",
-  }
+      "Developed a real-time multiplayer Tic-Tac-Toe application in Java, enabling seamless gameplay with an in-game reset feature for users to restart matches dynamically.",
+    link: "https://github.com/Prakul95/tictactoe",
+  },
+  
 ];
 
 const colabLinks = [
