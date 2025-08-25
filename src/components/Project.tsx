@@ -16,6 +16,11 @@ const projects = [
 
   },
   {
+    name: "RAG demo using Gemini",
+    description: "build a local Chroma vector store, embed with Google Gemini, run semantic search, and compare embeddings.",
+    link: "https://github.com/Prakul95/rag_demo"
+  },
+  {
     name: "Login Demo using JWT tokens",
     description:
       "Developed a PostgreSQL-backed authentication system in Go, implementing secure user authentication with JWT tokens. Integrated caching for efficient session management, storing JWT tokens in cache upon login and invalidating them upon logout to enhance security and performance.",
