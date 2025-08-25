@@ -17,7 +17,7 @@ const projects = [
   },
   {
     name: "RAG demo using Gemini",
-    description: "build a local Chroma vector store, embed with Google Gemini, run semantic search, and compare embeddings.",
+    description: "Built a local Chroma vector store, embed with Google Gemini, run semantic search, and compare embeddings.",
     link: "https://github.com/Prakul95/rag_demo"
   },
   {
