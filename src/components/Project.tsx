@@ -3,11 +3,11 @@ import { FaGithub, FaGoogle, FaYoutube, FaRegFilePdf } from "react-icons/fa";
 import "../assets/styles/Project.scss";
 
 const projects = [
-    {
-    name: "Create subtitles from audio and video using the open AI's whisper or Faster-Whisper model",
+  {
+    name: "Google-docs MCP Server",
     description:
-      "Built a Python tool that extracts audio from media files, transcribes speech using the Faster-Whisper model, and generates .srt subtitle files. Enabled configurable options like language selection, beam size tuning, and optional timing delays for flexible subtitle creation.",
-    link: "https://github.com/Prakul95/createSubtitles",
+      "Built and open sourced a Google docs MCP Server(Node/TypeScript) which allows users to list/fetch/search/create/update/copy Google docs via the Drive/Docs APIs with OAuth2, including optional preview generation and structured batchUpdate edits. Enables note-taking, ideation, summarization, and diction-to-Doc assistance without leaving AI assistant chat, reducing context switching.",
+    link: "https://github.com/Prakul95/mcp-server-google-docs/",
   },
   {
     name: "MCP server for star-gazing",
@@ -15,6 +15,13 @@ const projects = [
     link: "https://github.com/Prakul95/mcp-python-star-gazing"
 
   },
+    {
+    name: "Create subtitles from audio and video using the open AI's whisper or Faster-Whisper model",
+    description:
+      "Built a Python tool that extracts audio from media files, transcribes speech using the Faster-Whisper model, and generates .srt subtitle files. Enabled configurable options like language selection, beam size tuning, and optional timing delays for flexible subtitle creation.",
+    link: "https://github.com/Prakul95/createSubtitles",
+  },
+  
   {
     name: "RAG demo using Gemini",
     description: "Built a local Chroma vector store, embed with Google Gemini, run semantic search, and compare embeddings.",
