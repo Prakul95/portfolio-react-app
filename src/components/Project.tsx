@@ -4,6 +4,12 @@ import "../assets/styles/Project.scss";
 
 const projects = [
   {
+    name: "RAG-based map-reduce summary system for emails.",
+    description:
+      "Built a RAG-based daily digest system (Python + LangChain/LangGraph, uv) that connects to multiple email accounts, calendars, and docs via OAuth2, using map-reduce summarization with LLMs to generate cross-account executive summaries. Enables faster prioritization, reduced context switching, and better focus by consolidating scattered digital activity into one clear view. Demo video link: https://www.youtube.com/watch?v=rsYdgS8iEAI",
+    link: "https://drive.google.com/file/d/1IlFYurnVQDqcb9dVZ9BP_NIxfnO5Jm_7/view?usp=sharing",
+  },
+  {
     name: "Google-docs MCP Server",
     description:
       "Built and open sourced a Google docs MCP Server(Node/TypeScript) which allows users to list/fetch/search/create/update/copy Google docs via the Drive/Docs APIs with OAuth2, including optional preview generation and structured batchUpdate edits. Enables note-taking, ideation, summarization, and diction-to-Doc assistance without leaving AI assistant chat, reducing context switching.",
