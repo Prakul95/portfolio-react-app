@@ -27,6 +27,10 @@ const projects = [
       "Built a Python tool that extracts audio from media files, transcribes speech using the Faster-Whisper model, and generates .srt subtitle files. Enabled configurable options like language selection, beam size tuning, and optional timing delays for flexible subtitle creation.",
     link: "https://github.com/Prakul95/createSubtitles",
   },
+  {
+    name: "Digital film slate",
+    description:"Developed a React-based web application integrating a Spring Boot Java REST API backend for Amazon S3.\nImplemented Kubernetes-hosted file management with pre-signed URLs for secure access.\nAutomated digital film slate using React and OpenCV-powered QR models, reducing manual effort."
+  },
   
   {
     name: "RAG demo using Gemini",

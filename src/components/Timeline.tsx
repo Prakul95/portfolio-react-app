@@ -8,16 +8,6 @@ import '../assets/styles/Timeline.scss';
 
 const workEx = [
   {
-    date: "2024 - 2024",
-    title: "Freelance Software Developer",
-    subtitle: "Remote",
-    details: [
-      "Developed a React-based web application integrating a Spring Boot Java REST API backend for Amazon S3.",
-      "Implemented Kubernetes-hosted file management with pre-signed URLs for secure access.",
-      "Automated digital film slate using React and OpenCV-powered QR models, reducing manual effort."
-    ]
-  },
-  {
     date: "2022 - 2024",
     title: "Software Development Engineer - Alexa AI",
     subtitle: "Amazon, USA",

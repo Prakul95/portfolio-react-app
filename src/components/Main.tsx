@@ -7,7 +7,7 @@ import '../assets/styles/Main.scss';
 import DSC04669 from '../assets/images/DSC04669.png';
 
 function Main() {
-  const fileUrl = "https://docs.google.com/document/d/1RwNqXo8Mx6HDa19XGTMjtlnQEC0Zz-NvAekeATjVkrA/edit?usp=sharing";
+  const fileUrl = "https://docs.google.com/document/d/1VsKl3zyTVDkaeofd4L2jrjBAEz7tWGcKHZCEdEW2Ql0/edit?usp=sharing";
 
   return (
     <div className="container">
